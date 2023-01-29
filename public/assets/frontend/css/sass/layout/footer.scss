@@ -1,0 +1,105 @@
+.footer{
+    text-align: right;
+    padding: 50px 0;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    .logo_area{
+        text-align: center;
+        img,button{
+            width: 169px;
+            margin-top: 40px;       
+        }button{
+            padding: 4px 0;
+            border: 1px;
+            background-color: var(--text-color);
+            color: var(--primary-color);
+            transition: all .3s ease-in-out;
+            &:hover{
+                box-shadow: 3px 3px 1px #afbaae;
+            }
+        }
+    }
+    .lanks-tag{
+        ul{
+            li{
+                list-style-type: none;
+                margin: 10px 0;
+            }
+        } 
+    }
+    .contect-details{
+        .copy-right{
+            position: relative;
+        }
+        .copy-right::after,.copy-right::before{
+            position: absolute;
+            content: '';
+            bottom: 50px;
+            width: 90%;
+            height: 1px;
+            background: #e1e1e1;
+            display: block;
+            margin: auto;
+        }.copy-right::after{
+            bottom: -11px;
+        }
+        ul {
+            display: flex;
+            justify-content: center;
+            li{
+                list-style-type: none;
+                display: inline-block;
+                margin-top: 20px;
+                a{
+                    padding: 20px 25px;
+                }
+            }
+        }
+        .links{
+            ul li{
+                margin-top: 5px;
+               a {
+                    font-size: 14px;
+                    padding: 5px;
+                } 
+            } 
+        }
+    }
+    .headline{
+        font-weight: bold;
+        margin-bottom: 15px;
+        position: relative;
+        &:after{
+            position: absolute;
+            content: '';
+            right: 0;
+            bottom: -7px;
+            width: 60px;
+            height: 3px;
+            background: #bb1919;
+        }
+    }
+}
+// scroll to top style
+#scroll-up{
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    z-index: 100;
+    display: none;
+    #scroll-btn{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #bb1919;
+        border: 2px solid white;
+        color: whitesmoke;
+        font-size: 30px;
+        transition: all .3s ease-in-out;
+        &:hover{
+            border-color: #5c0b0b;
+        }
+    }
+}

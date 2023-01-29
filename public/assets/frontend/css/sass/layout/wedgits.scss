@@ -1,0 +1,36 @@
+.latest-posts.wedgit{
+    position: relative;
+    padding: 10px;
+    margin-bottom: 29px;
+    .section-head h2:after{
+        right: 10px;
+        top: 43px;
+    }
+}
+.sidbare-wedgit{
+    position: relative;
+    margin-bottom: 29px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 10px;
+    padding-bottom: 20px;
+}
+.search-wedgit{
+    
+    .section-head{
+        text-align: right;
+        margin-bottom: 35px;
+        h2{
+            font-size: 20px;
+            &:after{
+                position: absolute;
+                content: '';
+                right: 9px;
+                top: 41px;
+                width: 60px;
+                height: 3px;
+                background: #bb1919;
+            }
+        }
+    }
+}

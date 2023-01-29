@@ -1,0 +1,28 @@
+body{
+    background-color: #f7f7f7;
+}
+.category-page .wrapper-header .sort-tablist ul li.active,
+.category-page .box-item .box-content .box-title a:hover{
+    color: black;
+}
+.category-page .wrapper-header .sort-tablist ul li{
+    color: #727272;
+}
+.category-page .layout-list .box-item,
+.category-page .box-item .box-content{
+    background-color: #fff;
+}
+
+.category-page .layout-grid .category a{
+    color: #fff;
+}
+.page-content.about-page .section .content .box .slick-arrow{
+    border: 1px solid #d1d1d1;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background-color: #bb1919;
+    
+}
+.nav-pills .nav-link.active:hover{
+    color: #eee !important;
+}

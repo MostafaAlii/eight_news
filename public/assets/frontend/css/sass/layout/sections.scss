@@ -1,0 +1,138 @@
+.sec-name{
+    margin-bottom: 20px;
+    position: relative;
+    h3:after{
+        position: absolute;
+        content: "";
+        right: 0;
+        top: 41px;
+        width: 100px;
+        height: 3px;
+        background: #bb1919;
+    }
+} 
+.podcast-sec{
+    position: relative;
+}
+
+.main-article{
+    .carousel-inner::after{
+        
+    }
+    .carousel-item img{
+        height: 200px;
+        width: 100%;
+    }.carousel-caption{
+        position: relative;
+        color: var(--text-color);
+        text-align: right;
+        right: 3%;
+        .category{
+            color: #bb1919;
+            margin-top: 35px;
+        }
+    }
+    .carousel-item:before{
+        content: none !important;
+    }
+}
+.sub-article{
+    margin-top: 20px;
+    
+    .read-more{
+        display: flex;
+        justify-content: center;
+        margin-top: 132px;
+    }
+}
+.prodcast-item{
+    margin: 0 20px;
+    width: 100%;
+    .prodcast-content{
+        .category a{
+            color: #bb1919;
+            font-size: 14px;
+        }
+        img{
+            height: 200px;
+        }
+        .prodcast-title{
+            font-size: 19px;
+            margin: 10px 0;
+            margin-bottom: 20px;
+        }
+    }
+}
+.carousel-item .carousel-caption .prodcast-headline a{
+    color: var(--text-color);
+}
+
+
+// Hot News Section
+.hot-news{
+    // background-color: azure;
+    .sec-name{
+        margin-bottom: 33px;
+        h3{
+            font-size: 20px;
+        }
+    }
+    .prodcast-item{
+        margin: 0 20px;
+        width: 100%;
+        height: 306px;
+    }
+}
+
+//newsletter
+.newsletter{
+    margin: 20px 0;
+    margin-bottom: 0;
+    border-top: 1px solid rgb(228, 228, 228);
+    border-bottom: 1px solid rgb(228, 228, 228);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 50px 0;
+    .headline h3{
+        color: #C8492D !important;
+    }
+    p{
+        margin-bottom: -2px;
+    }
+    .note::before{
+        content: '*';
+        color: red;
+        font-size: 22px;
+        position: relative;
+        top: 7px;
+        left: 3px;
+    }
+    .title{
+        margin-top: 5px;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+    form{
+        .form-check{
+            margin-bottom: 20px;
+        }input{
+            border-radius: 0;
+            height: 40px;
+            padding: 1rem;
+            line-height: 0.5;
+        }
+        input[type=submit]{
+            border: 1px solid #000;
+            width: 90%;
+            background: #000;
+        }
+        .form-check:first-of-type{
+            margin-right: -2px;
+        }
+        .form-check-inline .form-check-input{
+            margin-left: 10px;
+            width: 17px;
+            height: 20px;
+        }
+    }
+}

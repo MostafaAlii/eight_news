@@ -1,0 +1,23 @@
+.swiper-slide,.latest-post-content .latest-item,.our-perpos-sec,
+.sidbare-wedgit,.category-page .layout-list .box-item,
+.category-page .layout-grid .box-item{
+    background-color: #0e0e0e;
+}
+.page-link{
+    background-color: #0e0e0e;
+    border: 1px solid #171717;
+}
+.page-link:hover{
+    background-color: #232323;
+    border-color: #4d4d4d;
+}
+a{
+    color: #dedede;
+}
+a:hover {
+    color: #fff;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+    background-color: #0e0e0e;
+    border: 1px solid #a6a6a6;
+}
