@@ -5,6 +5,10 @@
     td {
         text-align: center !important;
     }
+    img {
+        width: 50px !important;
+        height: 50px !important;
+        overflow: none;
 </style>
 @endsection
 @section('title')

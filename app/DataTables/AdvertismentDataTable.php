@@ -20,10 +20,22 @@ class AdvertismentDataTable extends DataTable {
             ->editColumn('created_at', function (Advertisment $ads) {
                 return '<span class="badge badge-primary">' .$ads->created_at?->diffForhumans() .'</span>';
             })
+            /*->editColumn('image', function (Advertisment $ads) {
+                // check if photo is not default.png
+                if ($ads->image != 'default.png') {
+                    return '<img src="' . $ads->image_path . '" style="width: 100px; height: 100px;">';
+                } else {
+                    return '<img src="' . asset('uploads/ads/default_ads.png') . '" class="img-thumbnail" style="width: 100px; height: 100px;">';
+                }
+                //return '<img src="' . $banner->image_path . '" class="img-thumbnail" style="width: 100px; height: 100px;">';
+            })*/
             ->editColumn('status', function (Advertisment $ads) {
                 return $ads->statusWithLabel();
             })
-            ->rawColumns(['action', 'created_at', 'status']);
+            ->editColumn('image', function (Advertisment $ads) {
+                return view('dashboard.ads.btn.image', compact('ads'));
+            })
+            ->rawColumns(['action', 'created_at', 'image', 'status']);
     }
 
     public function query(Advertisment $model): QueryBuilder {
@@ -70,6 +82,14 @@ class AdvertismentDataTable extends DataTable {
                 'name' => 'status',
                 'data' => 'status',
                 'title' => ' \ الحالة',
+            ],[
+                'name' => 'image',
+                'data' => 'image',
+                'title' => 'الصورة',
+                'searchable' => false,
+                'selectable' => false,
+                'sortable' => false,
+                'orderable' => false,
             ],[
                 'name' => 'created_at',
                 'data' => 'created_at',

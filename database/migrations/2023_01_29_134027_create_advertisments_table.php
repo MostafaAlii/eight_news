@@ -8,8 +8,8 @@ return new class extends Migration {
         Schema::create('advertisments', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('filename');
             $table->string('url')->nullable();
+            $table->foreignId('admin_id')->nullable()->constrained('admins')->cascadeOnDelete()->cascadeOnUpdate();
             $table->tinyInteger('status')->default(0);
             $table->timestamps();
         });

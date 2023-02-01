@@ -19,7 +19,6 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="name">الاسم</label>
-                        <input type="hidden" name="admin_type" id="admin_type" value="admin">
                         <input type="text" name="name" id="name" class="form-control" placeholder="اكتب الاسم"
                             autofocus />
                     </div>
@@ -28,8 +27,8 @@
                         <input type="url" name="url" id="url" class="form-control" placeholder="اكتب الرابط اذا وجد" />
                     </div>
                     <div class="form-group">
-                        <label for="photo">الصورة</label>
-                        <input type="file" name="filename" id="photo" class="form-control" />
+                        <label for="image">الصورة</label>
+                        <input type="file" name="image" id="image" class="form-control" />
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-success">حفظ</button>

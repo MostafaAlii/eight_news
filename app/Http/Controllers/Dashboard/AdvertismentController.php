@@ -1,11 +1,14 @@
 <?php
 namespace App\Http\Controllers\Dashboard;
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Traits\Uploads;
 use App\Models\Advertisment;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 use App\DataTables\AdvertismentDataTable;
-use Intervention\Image\Facades\Image;
+
 class AdvertismentController extends Controller {
+    use Uploads;
     public function index(AdvertismentDataTable $dataTable) {
         return $dataTable->render('dashboard.ads.index');
     }
@@ -15,19 +18,17 @@ class AdvertismentController extends Controller {
     }
 
     public function store(Request $request) {
-    try {
-        $request_data = $request->validate([
-            'name' => 'required'
-        ]);
-        $ads = Advertisment::create($request_data);
+        DB::beginTransaction();
         try {
-            $ads->addMediaFromRequest('filename')->toMediaCollection('images');
-        } catch (\Exception $e) {
-            return redirect()->route('advertisments.index')->with('error', 'There was an error uploading the file. Please try again later.');
-        }
-        return redirect()->route('advertisments.index')->with('success', 'Advertisment has been saved successfully');
-        } catch (\Exception $e) {
-            return redirect()->route('advertisments.index')->with('error', 'There was an error saving the advertisment. Please try again later.');
+            $request_data = $request->except(['image', 'admin_id', '_token']);
+            $request_data['admin_id'] = get_user_data()->id; 
+            $ads = Advertisment::create($request_data);
+            $request_data['image'] = $this->verifyAndStoreImage($request, 'image', 'advertisment', 'public_uploads', $ads->id, 'Advertisment');
+            DB::commit();
+            return redirect()->route('advertisments.index')->with('success', 'تم الحفظ بنجاح');
+        } catch(\Exception $e) {
+            DB::rollback();
+            return redirect()->route('advertisments.index')->with('error', 'هناك خظأ في البيانات');   
         }
     }
 

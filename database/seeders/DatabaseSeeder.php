@@ -11,6 +11,8 @@ class DatabaseSeeder extends Seeder {
             UserSeeder::class,
             TagSeeder::class,
             PostSeeder::class,
+            AdvertismentSeeder::class,
+            ImageSeeder::class,
         ]);
     }
 }

@@ -44,10 +44,11 @@ return [
             'throw' => false,
         ],
 
-        'media' => [
+        'public_uploads' => [
             'driver' => 'local',
-            'root'   => public_path('media'),
-            'url'    => env('APP_URL').'/media',
+            'root' => public_path('uploads'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
         ],
 
         's3' => [

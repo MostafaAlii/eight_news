@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphOne;
 
 class BaseModel extends Model {
     use HasFactory;
@@ -26,5 +27,9 @@ class BaseModel extends Model {
 
     public function scopeGetActive() {
         return $this->whereStatus('active')->get();
+    }
+
+    public function image(): MorphOne {
+        return $this->morphOne(Image::class, 'imageable');
     }
 }

@@ -6,11 +6,12 @@
 <script src="{{ URL::asset('assets/js/jquery-3.3.1.min.js') }}"></script>
 <!-- plugins-jquery -->
 <script src="{{ URL::asset('assets/js/plugins-jquery.js') }}"></script>
-<script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap4.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/2.3.3/js/dataTables.buttons.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/2.3.3/js/buttons.bootstrap4.min.js"></script>
-<script src="https://cdn.datatables.net/buttons/2.3.2/css/buttons.bootstrap4.min.css"></script>
+<script src="{{ URL::asset('assets/js/datatable/jquery_dataTables.min.js') }}"></script>
+<script src="{{ URL::asset('assets/js/datatable/dataTables_bootstrap4.min.js') }}"></script>
+<script src="{{ URL::asset('assets/js/datatable/dataTables_buttons.min.js') }}"></script>
+<script src="{{ URL::asset('assets/js/datatable/buttons_233_bootstrap4.min.js') }}"></script>
+<script src="{{ URL::asset('assets/js/datatable/buttons_232_bootstrap4.min.js') }}"></script>
+
 <!-- chart -->
 <script src="{{ URL::asset('assets/js/chart-init.js') }}"></script>
 <!-- calendar -->
@@ -34,7 +35,7 @@
 <script src="{{ URL::asset('assets/js/custom.js') }}"></script>
 <script src="{{ URL::asset('assets/js/nicescroll/jquery.nicescroll.js') }}"></script>
 <script src="{{ URL::asset('assets/js/switch/dist/switch.js') }}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="{{ URL::asset('assets/js/select2.min.js') }}"></script>
 <script>
     $(document).ready(function() {
         $('.js-example-basic-multiple').select2();

@@ -1,11 +1,13 @@
 <?php
 namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Spatie\MediaLibrary\{HasMedia, InteractsWithMedia};
-
-
-class Advertisment extends BaseModel implements HasMedia {
-    use HasFactory, InteractsWithMedia;
+class Advertisment extends BaseModel {
+    use HasFactory;
     protected $table = 'advertisments';
-    protected $guard = [];
+    protected $guarded = [];
+    protected $appends = ['image_path'];
+
+    public function getImagePathAttribute() {
+        return asset('uploads/advertisment/' . $this->image->filename);
+    }
 }
